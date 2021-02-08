@@ -1,0 +1,20 @@
+$breakPoint_phone: 768px;
+$breakPoint_tablet: 1024px;
+
+*, *::before, *::after{box-sizing: border-box;}
+
+@mixin mediaTablet {
+  @media(max-width: $breakPoint_tablet) {
+    @content;
+  }
+}
+@mixin mediaPhone {
+  @media(max-width: $breakPoint_phone) {
+    @content;
+  }
+}
+@mixin mediaPc {
+  @media(min-width: $breakPoint_tablet + 1) {
+    @content;
+  }
+}
