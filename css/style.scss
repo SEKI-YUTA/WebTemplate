@@ -70,6 +70,24 @@ header {
       overflow: hidden;
       display: table-cell;
       vertical-align: middle;
+      li {
+        height: 60px;
+        float: left;
+        &.close_button {
+          width: 60px;
+          height: 60px;
+          display: none;
+          background: yellow;
+        }
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+        a {
+          color: #2e2e2e;
+          line-height: 60px;
+          font-size: 30px;
+        }
+      }
       @include mediaTablet {
         position: fixed;
         top: 0px;
@@ -92,33 +110,15 @@ header {
           transition: .2s;
         }
         li {
-          float: none !important;
-          margin-left: 0 !important;
+          float: none;
+          margin-left: 0;
           position: relative;
           &.close_button {
             position: absolute;
             top: 20px;
             right: 20px;
-            display: block !important;
+            display: block;
           }
-        }
-      }
-      li {
-        height: 60px;
-        float: left;
-        &.close_button {
-          width: 60px;
-          height: 60px;
-          display: none;
-          background: yellow;
-        }
-        &:not(:first-child) {
-          margin-left: 20px;
-        }
-        a {
-          color: #2e2e2e;
-          line-height: 60px;
-          font-size: 30px;
         }
       }
     }

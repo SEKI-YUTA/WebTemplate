@@ -100,6 +100,28 @@ header .right_item ul {
   vertical-align: middle;
 }
 
+header .right_item ul li {
+  height: 60px;
+  float: left;
+}
+
+header .right_item ul li.close_button {
+  width: 60px;
+  height: 60px;
+  display: none;
+  background: yellow;
+}
+
+header .right_item ul li:not(:first-child) {
+  margin-left: 20px;
+}
+
+header .right_item ul li a {
+  color: #2e2e2e;
+  line-height: 60px;
+  font-size: 30px;
+}
+
 @media (max-width: 1024px) {
   header .right_item ul {
     position: fixed;
@@ -133,38 +155,16 @@ header .right_item ul {
     transition: .2s;
   }
   header .right_item ul li {
-    float: none !important;
-    margin-left: 0 !important;
+    float: none;
+    margin-left: 0;
     position: relative;
   }
   header .right_item ul li.close_button {
     position: absolute;
     top: 20px;
     right: 20px;
-    display: block !important;
+    display: block;
   }
-}
-
-header .right_item ul li {
-  height: 60px;
-  float: left;
-}
-
-header .right_item ul li.close_button {
-  width: 60px;
-  height: 60px;
-  display: none;
-  background: yellow;
-}
-
-header .right_item ul li:not(:first-child) {
-  margin-left: 20px;
-}
-
-header .right_item ul li a {
-  color: #2e2e2e;
-  line-height: 60px;
-  font-size: 30px;
 }
 
 main {
